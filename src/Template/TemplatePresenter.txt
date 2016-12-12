@@ -1,0 +1,27 @@
+package $packagename;
+
+import android.content.Context;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $namePresenter implements $nameContract.Presenter{
+
+    private Context mContext;
+    private $nameContract.View mView;
+
+    public $namePresenter(Context context, $nameContract.View view) {
+        this.mContext = context;
+        this.mView = view;
+        mView.setPresenter(this);
+    }
+
+    @Override
+    public void start() {
+
+    }
+
+}

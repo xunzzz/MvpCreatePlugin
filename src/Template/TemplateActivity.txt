@@ -1,0 +1,37 @@
+package $packagename;
+
+import $basepackagename.MvpBaseActivity;
+import $basepackagename.MvpBaseFragment;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $nameActivity extends MvpBaseActivity{
+
+    private $nameFragment m$nameFragment;
+
+    @Override
+    protected int getActivityLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected int getFragmentContentId() {
+        return 0;
+    }
+
+    @Override
+    protected MvpBaseFragment getFirstFragment() {
+        m$nameFragment = $nameFragment.getInstance();
+        return m$nameFragment;
+    }
+
+    @Override
+    protected void initPresenterInstance() {
+        new $namePresenter($nameActivity.this, m$nameFragment);
+    }
+
+}

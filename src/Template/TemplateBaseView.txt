@@ -1,0 +1,11 @@
+package $basepackagename;
+
+/**
+ * @author $author
+ * @Package $basepackagename
+ * @Description: $description
+ * @date $date
+ */
+public interface BaseView<T> {
+    void setPresenter(T presenter);
+}

@@ -1,0 +1,49 @@
+package $packagename;
+
+import android.os.Bundle;
+import android.view.View;
+
+import $basepackagename.MvpBaseFragment;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $nameFragment extends MvpBaseFragment implements $nameContract.View{
+
+    private $nameContract.Presenter mPresenter;
+
+    public static $nameFragment getInstance(){
+        return new $nameFragment();
+    }
+
+    @Override
+    protected void initView(View view, Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void setPresenter($nameContract.Presenter presenter) {
+        mPresenter = presenter;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mPresenter.start();
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPresenter = null;
+    }
+}
